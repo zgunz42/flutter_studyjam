@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:studyjam/list.dart';
 
 void main() => runApp(MyApp());
 
@@ -76,7 +77,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => ListPage()));
+          },
         ));
   }
 
